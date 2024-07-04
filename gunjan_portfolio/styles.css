@@ -1,0 +1,523 @@
+/* General Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body Styling */
+body {
+  background: white;
+  color: #774936;
+  padding-top: 10vh; /* Adjust this value based on the height of your header */
+}
+
+/* Header Styling */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: whitesmoke; /* Background color of the header */
+  z-index: 1000; /* Ensures header stays on top of other content */
+  border-bottom: 1px solid #ddd; /* Optional: adds a border at the bottom */
+}
+
+header nav {
+  height: 15vh;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 25px;
+  color: #8a5a44;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+header ul {
+  display: flex;
+  gap: 5rem;
+  list-style: none;
+}
+
+header a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  transition: 0.2s ease-in;
+  border-bottom: 2px solid #d69f7e;
+  overflow: hidden;
+  position: relative;
+}
+
+header a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.1rem;
+  z-index: -1;
+  transition: 0.2s ease-in;
+  transform: translateX(-101%);
+  background: #e6b8a2;
+}
+
+header a:hover::before {
+  transform: translateX(0);
+}
+
+header a:hover {
+  color: black;
+}
+
+header ul li:nth-child(1) a {
+  background: whitesmoke;
+  color: black;
+}
+
+header ul li:nth-child(1) a:hover {
+  background: #e6b8a2; /* Change this to the desired hover background color */
+  color: black; /* Change this to the desired hover text color */
+}
+
+#btn {
+  all: unset;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+  font-size: 30px;
+  display: none;
+}
+
+#btn:hover {
+  transform: rotate(180deg);
+  color: #e6b8a2;
+}
+
+/* Section Styling */
+.s-container {
+  min-height: 100vh;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 2rem; /* Add spacing from the top */
+}
+
+.icons {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icons .line {
+  height: 40px;
+  width: 3.5px;
+  border-radius: 5rem;
+  background: black;
+}
+
+.icons a {
+  font-size: 20px;
+  color: #774936;
+  background: white;
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.1s ease-in;
+}
+
+.icons a:hover {
+  transform: scale(1.1);
+}
+
+.header h3 {
+  font-size: 25px;
+  color: #774936;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: -1rem;
+}
+
+.header h1 {
+  font-size: 50px;
+  position: relative;
+  margin-bottom: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.header h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 5px;
+  border-radius: 5rem;
+  background: #774936;
+}
+
+.image {
+  width: 320px;
+  height: 320px;
+}
+
+.image img {
+  width: 100%;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 3.3rem;
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 700;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.description {
+  line-height: 1.6rem;
+  margin-bottom: 2rem;
+  color: black;
+  width: 85%;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons a {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: black;
+  padding: 0.8rem 1.6rem;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  background-color: #b07d62;
+}
+
+.buttons a:hover {
+  transform: scale(1.05);
+  color: white;
+}
+
+.buttons a:nth-child(2) {
+  background-color: white;
+  color: #111;
+}
+
+.buttons a:nth-child(2):hover {
+  background-color: #b07d62;
+  color: white;
+}
+
+.projects-section {
+  padding: 50px 0;
+  background: #f8f8f8;
+}
+
+.projects-section .header {
+  text-align: center;
+  margin-top: 15vh;
+  margin-bottom: 40px;
+}
+
+.projects-section .header h3 {
+  font-size: 1.5rem;
+  color: var(--text-light);
+}
+
+.projects-section .header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.projects-section .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+}
+
+.project-card .project-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.check-project {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.check-project a {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.check-project a:hover {
+  color: var(--primary-color-dark);
+}
+
+/* Skills Section */
+.skills {
+  padding-block: 2rem;
+  background: #f8f8f8;
+
+}
+
+.skills .container {
+  width: 70%;
+  margin: auto;
+}
+
+.skills .header {
+  text-align: center;
+  margin-top: 15vh;
+  margin-bottom: 40px;
+}
+
+.skills .header h3 {
+  font-size: 1.5rem;
+  color: #8a5a44;
+}
+
+.skills .header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #774936;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #774936;
+}
+
+.skill p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+/* Contact Section */
+.contact {
+  position: relative;
+  display: flex;
+  font-size: 2em;
+  min-height: 100vh;
+  padding-block: 2rem;
+  margin-top: 5vh; /* Add spacing below header */
+}
+
+.contact .container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact .wrapper {
+  font-size: 30px;
+}
+
+.contact .wrapper .grp {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact .grp:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.contact .grp i {
+  font-size: 40px;
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: black;
+}
+
+.footer {
+  background-color: #774936; /* Primary color for the footer */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 10%; /* Pushes footer to the bottom of the page */
+  width: 140%; /* Ensure it spans the full width */
+  position: relative; /* Ensures correct placement in the layout */
+}
+
+/* Footer heading and link styling */
+.footer h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.footer a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer a:hover {
+  color: orangered; /* Change this to your desired hover color */
+}
+
+/* Social media icons styling */
+.footer .social-media {
+  margin: 10px 0;
+}
+
+.footer .social-media a {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0 10px;
+}
+
+.footer .social-media a:hover {
+  color: orange; /* Change this to your desired hover color */
+}
+
+/* Copyright styling */
+.footer .copyright {
+  font-size: 0.9rem;
+  color: #d0d0d0;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 20vh; /* Adjust padding for mobile */
+  }
+
+  header {
+    height: 20vh; /* Adjust height for smaller screens */
+  }
+
+  .s-container {
+    width: 90%;
+    gap: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .header h3 {
+    font-size: 1.5rem;
+  }
+
+  .buttons a {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .contact {
+    font-size: 1.5em;
+    margin-top: 20vh; /* Adjust margin for mobile */
+  }
+
+  .contact .wrapper {
+    font-size: 20px;
+  }
+}
